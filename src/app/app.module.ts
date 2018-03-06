@@ -4,18 +4,21 @@ import { AppComponent } from './containers/root/app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
 import { ComponentsModule } from './components/index';
-
+import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MytodosComponent } from './containers/mytodos/mytodos.component';
+import { ManagetodoComponent } from './containers/managetodo/managetodo.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, MytodosComponent, ManagetodoComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     ComponentsModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    NgbModule.forRoot(),
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
