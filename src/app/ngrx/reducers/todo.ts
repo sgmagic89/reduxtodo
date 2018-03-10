@@ -6,5 +6,3 @@ export interface State {
     ids: string[];
     entities: { [id: string], Todo };
 }
-
-
