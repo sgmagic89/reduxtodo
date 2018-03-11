@@ -5,18 +5,18 @@ import { Todo, TodoItem } from '../../models/todo.model';
 export const SEARCH =           '[Todo] Search';
 export const SEARCH_COMPLETE =  '[Todo] Search Complete';
 export const LOAD =             '[Todo] Load';
-export const LOADCOMPLETE =     '[Todo] Load Complete';
-export const LOADFAILED =       '[Todo] Load Failed';
+export const LOAD_SUCCESS =      '[Todo] Load Complete';
+export const LOAD_FAILED =       '[Todo] Load Failed';
 export const SELECT =           '[Todo] Select';
 export const DELETE =           '[Todo] Delete';
-export const DELETESUCCESS =    '[Todo] Delete Success';
-export const DELETEFAILED =     '[Todo] Delete Failed';
+export const DELETE_SUCCESS =    '[Todo] Delete Success';
+export const DELETE_FAILED =     '[Todo] Delete Failed';
 export const EDIT =             '[Todo] Edit';
-export const EDITSUCCES =       '[Todo] Edit Success';
-export const EDITFAILED =       '[Todo] Edit Failed';
+export const EDIT_SUCCES =       '[Todo] Edit Success';
+export const EDIT_FAILED =       '[Todo] Edit Failed';
 export const CREATE =           '[Todo] Create';
-export const CREATESUCCESS =    '[Todo] Create Success';
-export const CREATEFAILED =     '[Todo] Create Failed';
+export const CREATE_SUCCESS =    '[Todo] Create Success';
+export const CREATE_FAILED =     '[Todo] Create Failed';
 
 export class CreateAction implements Action {
   readonly type = CREATE;
@@ -89,7 +89,7 @@ export class LoadSuccessAction implements Action {
 export class LoadFailedAction implements Action {
          readonly type = LOAD_FAILED;
 
-         constructor(public payload: Todo[]) {}
+         constructor(public payload: any) {}
        }
 
 export class SearchAction implements Action {
